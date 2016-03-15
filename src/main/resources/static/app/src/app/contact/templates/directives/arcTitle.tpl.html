@@ -1,0 +1,14 @@
+<div class="form-group">
+    <label class="col-xs-10 col-sm-2 col-md-2 control-label">Title:</label>
+    <div class="col-xs-4 col-sm-2 col-md-2">
+        <select ng-init="data.title = titleOptions[0]"
+                ng-disabled="readonly"
+                ng-required="required"
+                ng-model="data.title"
+                name="title"
+                class="form-control"
+                ng-options="title as title for title in titleOptions">
+            <option></option>
+        </select>
+    </div>
+</div>

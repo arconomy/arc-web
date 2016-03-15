@@ -1,0 +1,25 @@
+<div class="form-group">
+    <label class="col-md-2 col-sm-2 control-label">Web Site URL:</label>
+    <div class="col-sm-4">
+        <input ng-readonly="readonly"
+               ng-required="required"
+               ng-model="data.websiteUrl"
+               class="form-control"
+               type="text"
+               name="name">
+    </div>
+</div>
+<div class="form-group">
+    <label class="col-md-2 col-sm-2 control-label">Can you accept payments on your website?</label>
+    <div class="col-xs-4 col-sm-2 col-md-1"">
+        <select ng-init="data.hasCommerceWebSite = yesNoOptions[0]"
+                ng-disabled="readonly"
+                ng-required="required"
+                ng-model="data.hasCommerceWebSite"
+                name="hasCommerceWebSite"
+                class="form-control"
+                ng-options="yesNo as yesNo for yesNo in yesNoOptions">
+            <option></option>
+        </select>
+    </div>
+</div>

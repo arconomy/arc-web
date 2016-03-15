@@ -1,0 +1,25 @@
+<div class="form-group">
+    <label class="col-md-2 col-sm-2 control-label">Location:</label>
+    <div class="col-sm-4">
+        <input ng-readonly="readonly"
+               ng-required="required"
+               ng-model="data.location"
+               class="form-control"
+               type="text"
+               name="location">
+    </div>
+</div>
+<div class="form-group">
+    <label class="col-xs-10 col-sm-2 col-md-2 control-label">State:</label>
+    <div class="col-xs-4 col-sm-2 col-md-2">
+        <select ng-init="data.state = stateOptions[0]"
+                ng-disabled="readonly"
+                ng-required="required"
+                ng-model="data.state"
+                name="state"
+                class="form-control"
+                ng-options="state as state for state in stateOptions">
+            <option></option>
+        </select>
+    </div>
+</div>

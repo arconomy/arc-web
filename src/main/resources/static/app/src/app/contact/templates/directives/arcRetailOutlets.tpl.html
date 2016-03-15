@@ -1,0 +1,72 @@
+<div class="form-group">
+    <label class="col-md-2 col-sm-8 col-lg-10">Do you sell your products and services through anywhere else?</label>
+    <div class="col-xs-8 col-sm-10 col-lg-offset-2">
+        <label class="checkbox-inline arc-checkbox-inline-first-item">
+            <input type="checkbox"
+                   id="sellsLocalMarkets"
+                   ng-readonly="readonly"
+                   ng-model="data.sellsLocalMarkets">Local Markets
+        </label>
+
+        <label class="checkbox-inline">
+            <input type="checkbox"
+                   id="sellsTradeFairs"
+                   ng-readonly="readonly"
+                   ng-model="data.sellsTradeFairs">Trade Fairs
+        </label>
+
+        <label class="checkbox-inline">
+            <input type="checkbox"
+                   id="sellsRetailSuppliers"
+                   ng-readonly="readonly"
+                   ng-model="data.sellsRetailSuppliers">Retail Supplier
+        </label>
+
+        <label class="checkbox-inline">
+            <input type="checkbox"
+                   id="hasAmazonStore"
+                   ng-readonly="readonly"
+                   ng-model="data.hasAmazonStore">Amazon Store
+        </label>
+
+        <label class="checkbox-inline">
+            <input type="checkbox"
+                   id="hasEbayStore"
+                   ng-readonly="readonly"
+                   ng-model="data.hasEbayStore">eBay Store
+        </label>
+
+        <label class="checkbox-inline">
+            <input type="checkbox"
+                   id="hasEtzyStore"
+                   ng-readonly="readonly"
+                   ng-model="data.hasEtzyStore">Etzy Store
+        </label>
+
+        <label class="checkbox-inline">
+            <input type="checkbox"
+                   id="sellsOnSocialPlatform"
+                   ng-readonly="readonly"
+                   ng-model="data.sellsOnSocialPlatform">Sell through Social platform(s)
+        </label>
+
+        <label class="checkbox-inline">
+            <input type="checkbox"
+                   id="sellsOtherChannels"
+                   ng-readonly="readonly"
+                   ng-model="data.sellsOtherChannels">Others
+        </label>
+    </div>
+</div>
+
+<div ng-show="data.sellsOtherChannels" class="form-group">
+    <label class="col-md-2 control-label">Please list any other sales and distribution channels</label>
+    <div class="col-md-9">
+        <textarea ng-readonly="readonly"
+                  ng-required="required"
+                  ng-model="data.otherSalesChannels"
+                  class="form-control contact-textarea"
+                  type="text"
+                  name="otherSalesChannels"></textarea>
+    </div>
+</div>

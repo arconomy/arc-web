@@ -1,0 +1,14 @@
+<div class="form-group">
+    <label class="col-md-2 col-xs-10 col-sm-2 control-label">Is your business GST Registered:</label>
+        <div class="col-xs-4 col-sm-2 col-md-1">
+            <select ng-init="data.gstRegistered = yesNoOptions[0]"
+                    ng-disabled="readonly"
+                    ng-required="required"
+                    ng-model="data.gstRegistered"
+                    name="gstRegistered"
+                    class="form-control"
+                    ng-options="yesNo as yesNo for yesNo in yesNoOptions">
+                <option></option>
+            </select>
+        </div>
+</div>
