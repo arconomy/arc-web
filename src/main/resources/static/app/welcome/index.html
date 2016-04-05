@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ngArconomy">
+<head>
+    <title ng-bind="pageTitle"></title>
+    <link href="assets/images/favicon.ico" rel="icon" type="image/x-icon"/>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- compiled CSS -->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap-theme.min.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/font-awesome.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="assets/arconomy-0.0.1.css"/>
+    
+
+    <!-- compiled JavaScript -->
+    
+    <script type="text/javascript" src="vendor/angular/angular.min.js"></script>
+    
+    <script type="text/javascript" src="src/app/app.js"></script>
+    
+    <script type="text/javascript" src="vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    
+    <script type="text/javascript" src="vendor/jquery/dist/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
+    
+    <script type="text/javascript" src="vendor/angular-resource/angular-resource.min.js"></script>
+    
+    <script type="text/javascript" src="vendor/moment/min/moment.min.js"></script>
+    
+    <script type="text/javascript" src="vendor/angular-sanitize/angular-sanitize.min.js"></script>
+    
+    <script type="text/javascript" src="src/app/common/controllers/appController.js"></script>
+    
+    <script type="text/javascript" src="src/app/common/js/directives/arcFooter.js"></script>
+    
+    <script type="text/javascript" src="src/app/common/services/propertyService.js"></script>
+    
+    <script type="text/javascript" src="src/app/contact/js/controllers/ContactController.js"></script>
+    
+    <script type="text/javascript" src="src/app/contact/js/directives/arcAlert.js"></script>
+    
+    <script type="text/javascript" src="src/app/contact/js/directives/arcBusinessName.js"></script>
+    
+    <script type="text/javascript" src="src/app/contact/js/directives/arcContactDetails.js"></script>
+    
+    <script type="text/javascript" src="src/app/contact/js/directives/arcContactForm.js"></script>
+    
+    <script type="text/javascript" src="src/app/contact/js/directives/arcEmployees.js"></script>
+    
+    <script type="text/javascript" src="src/app/contact/js/directives/arcEnquiry.js"></script>
+    
+    <script type="text/javascript" src="src/app/contact/js/directives/arcFirstName.js"></script>
+    
+    <script type="text/javascript" src="src/app/contact/js/directives/arcGst.js"></script>
+    
+    <script type="text/javascript" src="src/app/contact/js/directives/arcLastName.js"></script>
+    
+    <script type="text/javascript" src="src/app/contact/js/directives/arcLocation.js"></script>
+    
+    <script type="text/javascript" src="src/app/contact/js/directives/arcRetailOutlets.js"></script>
+    
+    <script type="text/javascript" src="src/app/contact/js/directives/arcSocialDetails.js"></script>
+    
+    <script type="text/javascript" src="src/app/contact/js/directives/arcTitle.js"></script>
+    
+    <script type="text/javascript" src="src/app/contact/js/directives/arcWebSiteDetails.js"></script>
+    
+    <script type="text/javascript" src="src/app/contact/js/services/contactService.js"></script>
+    
+    <script type="text/javascript" src="templates-common.js"></script>
+    
+    <script type="text/javascript" src="templates-app.js"></script>
+    
+
+    <!-- Custom Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+          type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+    <div class="container topnav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a ui-sref="home"><img class="" src="assets/images/arconomy.png" alt=""></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a ui-sref="contact">Contact</a>
+                </li>
+                <li>
+                    <a ui-sref="home">Home</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<div id="mainTop"></div>
+<div ui-view="main">
+</div>
+
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="copyright text-muted small">Copyright &copy; Arconomy 2016. All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>
+
+

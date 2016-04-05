@@ -18,7 +18,7 @@
     <% scripts.forEach( function ( file ) {
     if (file !=='src/app/app.js') {
     var insertAppJs = false;
-    if (file =='vendor/angular/angular.js') {
+    if (file =='vendor/angular/angular.min.js') {
     insertAppJs =true;
     }
     %>
@@ -76,6 +76,7 @@
     <!-- /.container -->
 </nav>
 
+<div id="mainTop"></div>
 <div ui-view="main">
 </div>
 

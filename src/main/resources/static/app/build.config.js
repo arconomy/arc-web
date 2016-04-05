@@ -8,9 +8,9 @@ module.exports = {
    * development and the `compile_dir` folder is where our app resides once it's
    * completely built.
    */
-  build_dir: 'build',
+  build_dir: 'welcome',
   compile_dir: 'bin',
-  dev_live_reload_target: '/Users/cornishac/dev/workspace/web/target/classes/static/app/',
+  dev_live_reload_target: '/Users/cornishac/dev/workspace/web/target/classes/static/',
 
   /**
    * This is a collection of file patterns that refer to our app code (the
@@ -55,7 +55,7 @@ module.exports = {
    */
   vendor_files: {
     js: [
-      'vendor/angular/angular.js',
+      'vendor/angular/angular.min.js',
       'vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
       'vendor/jquery/dist/jquery.min.js',
       'vendor/bootstrap/dist/js/bootstrap.min.js',
@@ -63,15 +63,10 @@ module.exports = {
       'vendor/jquery/dist/jquery.min.js',
       'vendor/jquery/dist/jquery.min.map',
       'vendor/angular-resource/angular-resource.min.js',
-      'vendor/bootstrap-ui-datetime-picker/dist/datetime-picker.min.js',
-      'vendor/angular-ui-calendar/src/calendar.js',
       'vendor/moment/min/moment.min.js',
-      'vendor/fullcalendar/dist/fullcalendar.min.js',
-      'vendor/fullcalendar/dist/gcal.js',
       'vendor/angular-sanitize/angular-sanitize.min.js'
     ],
     css: [
-      'vendor/fullcalendar/dist/fullcalendar.min.css',
       'vendor/bootstrap/dist/css/bootstrap.min.css',
       'vendor/bootstrap/dist/css/bootstrap-theme.min.css',
       'vendor/font-awesome/css/font-awesome.css'
