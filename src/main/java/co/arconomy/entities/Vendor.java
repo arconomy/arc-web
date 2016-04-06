@@ -21,6 +21,8 @@ public class Vendor {
     private String state;
     private String phone;
     private String email;
+
+    @Column(columnDefinition = "TEXT")
     private String enquiry;
     private String websiteUrl;
     private String fullTimeEmployees;
@@ -37,6 +39,8 @@ public class Vendor {
     private boolean hasLinkedIn;
     private boolean hasPinterest;
     private boolean hasTwitter;
+
+    @Column(columnDefinition = "TEXT")
     private String otherSalesChannels;
 
     private boolean sellsLocalMarkets;

@@ -10,7 +10,7 @@ module.exports = {
    */
   build_dir: 'welcome',
   compile_dir: 'bin',
-  dev_live_reload_target: '/Users/cornishac/dev/workspace/web/target/classes/static/',
+  dev_live_reload_target: '/Users/cornishac/dev/workspace/web/target/classes/static/app/',
 
   /**
    * This is a collection of file patterns that refer to our app code (the

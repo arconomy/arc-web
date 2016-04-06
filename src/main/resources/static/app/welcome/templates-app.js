@@ -12,11 +12,10 @@ angular.module("common/templates/arcFooter.tpl.html", []).run(["$templateCache",
     "                <ul class=\"list-inline banner-social-buttons\">\n" +
     "                    <li>\n" +
     "                        <a href=\"https://twitter.com/arconomy\" class=\"btn btn-default btn-lg\"><i\n" +
-    "                                class=\"fa fa-twitter fa-fw\"></i> <span class=\"network-name\">Twitter</span></a>\n" +
+    "                                class=\"fa fa-twitter fa-fw\"></i></a>\n" +
     "                    </li>\n" +
     "                    <li>\n" +
-    "                        <a href=\"https://facebook.com/arconomy\" class=\"btn btn-default btn-lg\"><i class=\"fa fa-facebook fa-fw\"></i> <span\n" +
-    "                                class=\"network-name\">Facebook</span></a>\n" +
+    "                        <a href=\"https://facebook.com/arconomy\" class=\"btn btn-default btn-lg\"><i class=\"fa fa-facebook fa-fw\"></i></a>\n" +
     "                    </li>\n" +
     "                </ul>\n" +
     "            </div>\n" +
@@ -65,7 +64,6 @@ angular.module("contact/templates/contact.tpl.html", []).run(["$templateCache", 
     "    <!-- /.container -->\n" +
     "</div>\n" +
     "<!-- /.content-section-a -->\n" +
-    "\n" +
     "<arc-contact-form></arc-contact-form>\n" +
     "<arc-footer></arc-footer>\n" +
     "\n" +
@@ -125,6 +123,7 @@ angular.module("contact/templates/directives/arcContactDetails.tpl.html", []).ru
 
 angular.module("contact/templates/directives/arcContactForm.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("contact/templates/directives/arcContactForm.tpl.html",
+    "<hr class=\"contact-form-spacer\">\n" +
     "<form class=\"form-horizontal row-border contact-form\" name=\"contactForm\" ng-submit=\"saveContactForm()\">\n" +
     "    <div class=\"row\">\n" +
     "        <div class=\"col-md-12 col-sm-12 col-xs-12\">\n" +
@@ -511,16 +510,6 @@ angular.module("home/templates/home.tpl.html", []).run(["$templateCache", functi
     "                <div class=\"intro-message\">\n" +
     "                    <h3>Every business has a story...</h3>\n" +
     "                    <hr class=\"intro-divider\">\n" +
-    "                    <ul class=\"list-inline intro-social-buttons\">\n" +
-    "                        <li>\n" +
-    "                            <a href=\"https://twitter.com/arconomy\" class=\"btn btn-default btn-lg\"><i\n" +
-    "                                    class=\"fa fa-twitter fa-fw\"></i> <span class=\"network-name\">Twitter</span></a>\n" +
-    "                        </li>\n" +
-    "                        <li>\n" +
-    "                            <a href=\"https://facebook.com/arconomy\" class=\"btn btn-default btn-lg\"><i class=\"fa fa-facebook fa-fw\"></i> <span\n" +
-    "                                    class=\"network-name\">Facebook</span></a>\n" +
-    "                        </li>\n" +
-    "                    </ul>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
@@ -545,13 +534,14 @@ angular.module("home/templates/home.tpl.html", []).run(["$templateCache", functi
     "                    <br>\n" +
     "                    <br>\n" +
     "                    Arconomy provides a fully managed digital platform together with shared premium retail spaces so that you can focus on creating\n" +
-    "                    great products and services for your customers.<br>\n" +
+    "                    great products and services for your customers. <br>\n" +
     "                    <br>\n" +
     "            </p>\n" +
     "            </div>\n" +
     "            <div class=\"img-top-margin col-lg-5 col-lg-offset-2 col-sm-6\">\n" +
     "                <img class=\"img-responsive\" src=\"assets/images/arc-you-make.png\" alt=\"\">\n" +
     "                <H4 class=\"text-center\">Focus on your products</H4>\n" +
+    "                <hr class=\"img-heading-spacer\">\n" +
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
@@ -581,6 +571,7 @@ angular.module("home/templates/home.tpl.html", []).run(["$templateCache", functi
     "            <div class=\"img-top-margin col-lg-5 col-sm-pull-6  col-sm-6\">\n" +
     "                <img class=\"img-responsive\" src=\"assets/images/arc-customers.png\" alt=\"\">\n" +
     "                <H4 class=\"text-center\">Engage with your customers</H4>\n" +
+    "                <hr class=\"img-heading-spacer\">\n" +
     "            </div>\n" +
     "        </div>\n" +
     "\n" +
@@ -609,14 +600,16 @@ angular.module("home/templates/home.tpl.html", []).run(["$templateCache", functi
     "                    <br>\n" +
     "                    <br>\n" +
     "                    We provide a seamless digital and in store shopping experience leveraging cutting edge retail technology\n" +
-    "                    so your customers received a personalised, high quality shopping experience that matches your high quality products and services.\n" +
+    "                    so your customers receive a personalised, high quality shopping experience that matches your high quality products and services.\n" +
     "                </p>\n" +
     "            </div>\n" +
     "            <div class=\"img-top-margin col-lg-5 col-lg-offset-2 col-sm-6\">\n" +
     "                <img class=\"img-responsive\" src=\"assets/images/arc-shop.png\" alt=\"\">\n" +
     "                <H4 class=\"text-center\">Retail technology</H4>\n" +
+    "                <hr class=\"img-heading-spacer\">\n" +
     "                <img class=\"img-responsive\" src=\"assets/images/arc-store.png\" alt=\"\">\n" +
     "                <H4 class=\"text-center\">Premium store locations</H4>\n" +
+    "                <hr class=\"img-heading-spacer\">\n" +
     "            </div>\n" +
     "        </div>\n" +
     "\n" +
@@ -632,12 +625,13 @@ angular.module("home/templates/home.tpl.html", []).run(["$templateCache", functi
     "                <div class=\"clearfix\"></div>\n" +
     "                <h2 class=\"section-heading\">Creating a brand:</h2>\n" +
     "                <p class=\"lead\">Having a great vision for your brand and products is only as good as the creative\n" +
-    "                    production that designs the final media and branded collateral. Working with design agencies can be expensive and challenging to manage.\n" +
+    "                    production that designs the final media and branded collateral. We understand that working with design agencies can be expensive and challenging to manage.\n" +
     "                    <br>\n" +
     "                    <br>\n" +
     "                    We recognise that Business owners are passionate about their brand and want to be involved in the creative process. We offer solutions to help\n" +
     "                    you build your brand and produce quality content. Our aim is to support you on your journey, providing advice and expertise as required or simply\n" +
     "                    getting the job done as part of your virtual team.\n" +
+    "                    <br>\n" +
     "                    <br>\n" +
     "                    As part of the Arconomy family you will have access to a creative team that can support you bringing\n" +
     "                    your vision to life.\n" +
@@ -646,6 +640,7 @@ angular.module("home/templates/home.tpl.html", []).run(["$templateCache", functi
     "            <div class=\"img-top-margin col-lg-5 col-sm-pull-6  col-sm-6\">\n" +
     "                <img class=\"img-responsive\" src=\"assets/images/arc-creative.png\" alt=\"\">\n" +
     "                <H4 class=\"text-center\">Creative, Brand and Marketing Support</H4>\n" +
+    "                <hr class=\"img-heading-spacer\">\n" +
     "            </div>\n" +
     "        </div>\n" +
     "\n" +
@@ -681,8 +676,10 @@ angular.module("home/templates/home.tpl.html", []).run(["$templateCache", functi
     "            <div class=\"img-top-margin col-lg-5 col-lg-offset-2 col-sm-6\">\n" +
     "                <img class=\"img-responsive\" src=\"assets/images/arc-payment.png\" alt=\"\">\n" +
     "                <H4 class=\"text-center\">Payment technology</H4>\n" +
+    "                <hr class=\"img-heading-spacer\">\n" +
     "                <img class=\"img-responsive\" src=\"assets/images/arc-deliver.png\" alt=\"\">\n" +
     "                <H4 class=\"text-center\">Delivery services</H4>\n" +
+    "                <hr class=\"img-heading-spacer\">\n" +
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
@@ -707,8 +704,10 @@ angular.module("home/templates/home.tpl.html", []).run(["$templateCache", functi
     "            <div class=\"img-top-margin col-lg-5 col-sm-pull-6  col-sm-6\">\n" +
     "                <img class=\"img-responsive\" src=\"assets/images/arc-ship.png\" alt=\"\">\n" +
     "                <H4 class=\"text-center\">Fulfil orders from anywhere</H4>\n" +
+    "                <hr class=\"img-heading-spacer\">\n" +
     "                <img class=\"img-responsive\" src=\"assets/images/arc-collect.png\" alt=\"\">\n" +
     "                <H4 class=\"text-center\">Convenient local pick up locations</H4>\n" +
+    "                <hr class=\"img-heading-spacer\">\n" +
     "            </div>\n" +
     "        </div>\n" +
     "\n" +

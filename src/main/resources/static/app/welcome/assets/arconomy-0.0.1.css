@@ -8972,6 +8972,10 @@ nav.navbar.navbar-default.navbar-fixed-top.topnav {
   border-top-width: 1px;
   padding: 2px 0px;
 }
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  background: #F7F7F7;
+}
 .text-fade {
   color: #fff;
   opacity: 0.8;
@@ -8994,6 +8998,10 @@ nav.navbar.navbar-default.navbar-fixed-top.topnav {
 }
 .img-top-margin {
   margin-top: 5%;
+}
+.img-heading-spacer {
+  width: 200px;
+  border-top: 3px solid #e7e7e7;
 }
 /**
  * Now that all app-wide styles have been applied, we can load the styles for
@@ -9031,7 +9039,7 @@ h6 {
 .intro-header {
   padding-top: 50px;
   /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-  padding-bottom: 50px;
+  padding-bottom: 10px;
   text-align: center;
   color: #f8f8f8;
   background: url(../assets/images/brisbane.png) no-repeat center center;
@@ -9039,7 +9047,8 @@ h6 {
 }
 .intro-message {
   position: relative;
-  padding-top: 20%;
+  padding-top: 30%;
+  padding-bottom: 5%;
 }
 .intro-message > h1 {
   margin: 0;
@@ -9056,7 +9065,7 @@ h6 {
 }
 @media (max-width: 767px) {
   .intro-message {
-    padding-bottom: 15%;
+    padding-bottom: 5%;
   }
   .intro-message > h1 {
     font-size: 3em;
@@ -9071,6 +9080,28 @@ h6 {
   }
   .intro-divider {
     width: 100%;
+  }
+  .banner h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    font-size: 3em;
+  }
+  ul.banner-social-buttons > li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  ul.banner-social-buttons > li:last-child {
+    margin-bottom: 0;
+  }
+  .menu-divider {
+    border-top: 1px solid #e7e7e7;
+  }
+}
+@media (max-width: 1199px) {
+  ul.banner-social-buttons {
+    float: left;
+    margin-top: 15px;
   }
 }
 .network-name {
@@ -9114,27 +9145,6 @@ h6 {
   float: right;
   margin-top: 0;
 }
-@media (max-width: 1199px) {
-  ul.banner-social-buttons {
-    float: left;
-    margin-top: 15px;
-  }
-}
-@media (max-width: 767px) {
-  .banner h2 {
-    margin: 0;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
-    font-size: 3em;
-  }
-  ul.banner-social-buttons > li {
-    display: block;
-    margin-bottom: 20px;
-    padding: 0;
-  }
-  ul.banner-social-buttons > li:last-child {
-    margin-bottom: 0;
-  }
-}
 footer {
   padding: 50px 0;
   background-color: #f8f8f8;
@@ -9154,4 +9164,8 @@ p.copyright {
 }
 .arc-checkbox-inline-first-item {
   padding-left: 30px;
+}
+.contact-form-spacer {
+  width: 50%;
+  border-top: 3px solid #e7e7e7;
 }
