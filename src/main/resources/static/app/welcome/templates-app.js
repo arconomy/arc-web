@@ -666,7 +666,7 @@ angular.module("home/templates/home.tpl.html", []).run(["$templateCache", functi
     "                    <li>Become part of a dynamic small business network</li>\n" +
     "                    <li>Focus externally on your customers rather than internally on your business processes</li>\n" +
     "                    <li>Spend more time innovating and creating personalised products and services your customers love</li>\n" +
-    "                    <li>Share the cost and time overheads of a operating a professional retail space\n" +
+    "                    <li>Share the cost and time overheads of operating a professional retail space\n" +
     "                    <li>Remove the challenges of developing and maintaining a competitive website on your own</li>\n" +
     "                    <li>Benefit from shared marketing efforts attracting new customers both online and to your retail store</li>\n" +
     "                    <li>Provide your customers a shopping experience that is as high quality as your products and services</li>\n" +

@@ -1,11 +1,14 @@
 package co.arconomy.rest.mvc;
 
+import co.arconomy.services.MailService;
 import co.arconomy.services.VendorService;
 import co.arconomy.rest.resources.VendorResource;
 import co.arconomy.rest.resources.VendorResourceArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.mail.MailSender;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +22,9 @@ public class VendorController {
     @Autowired
     VendorService vendorService;
 
+    @Autowired
+    MailService mailService;
+
     public VendorController() {
     }
 
@@ -28,6 +34,7 @@ public class VendorController {
 
         VendorResource responseVendorResource = vendorService.saveVendor(vendorResource);
         if (responseVendorResource != null) {
+            mailService.sendMail(responseVendorResource);
             return new ResponseEntity<>(responseVendorResource, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
